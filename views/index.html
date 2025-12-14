@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="tailwind.min.css">
+
+</head>
+
+<body class="min-h-screen bg-gray-100 flex flex-col">
+    <!-- Navbar -->
+    <nav class="w-full flex justify-between items-center px-6 py-6 md:px-16 bg-white shadow-sm z-50">
+        <div class="text-blue-700 text-2xl font-bold tracking-wide">
+            BNext Dev
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-10 text-sm font-medium text-blue-600">
+            <a href="#" class="hover:text-blue-700 transition">Home</a>
+            <a href="#" class="hover:text-blue-700 transition">About us</a>
+            <a href="#" class="hover:text-blue-700 transition">Contact us</a>
+        </div>
+
+        <!-- Simple static hamburger (mobile only) -->
+        <button id="menu-btn" class="md:hidden">
+            <svg class="w-7 h-7 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu - Drops down from top (full width) -->
+    <div id="mobile-menu" class="fixed inset-x-0 top-0 z-40 hidden">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div> <!-- overlay -->
+
+        <div class="relative bg-white shadow-2xl pt-24 pb-12">
+            <div class="flex flex-col items-center space-y-10 text-xl font-medium text-gray-800">
+                <a href="#" class="text-blue-600 hover:text-blue-800">Home</a>
+                <a href="#" class="text-blue-600 hover:text-blue-800">About us</a>
+                <a href="#" class="text-blue-600 hover:text-blue-800">Contact us</a>
+            </div>
+        </div>
+    </div>
+
+
+
+  <!-- HERO SECTION (Perfect Center) -->
+<section class="min-h-screen flex flex-col justify-center items-center text-center px-4 bg-gray-100 -mt-10">
+
+
+    <!-- Badge -->
+    <p class="inline-block bg-blue-50 text-blue-600 px-4 py-1 rounded-full text-sm font-medium">
+        🚀 Community Powered Learning Platform
+    </p>
+
+    <!-- Main Heading -->
+    <h1 class="text-3xl md:text-5xl font-bold mt-6">Master Tech Stacks</h1>
+    <h2 class="text-3xl md:text-5xl font-bold text-blue-600 mt-1">Together</h2>
+
+    <!-- Subtext -->
+    <p class="mt-4 text-gray-600 max-w-2xl mx-auto text-sm md:text-base">
+        Join a community of learners and contributors. Share topics, suggest questions,
+        and help others master MERN, Flutter, Django, and more.
+    </p>
+
+    <!-- Button -->
+    <button class="bg-blue-600 text-white px-6 py-2 mt-6 rounded-md hover:bg-blue-700 transition">
+        Get Started
+    </button>
+
+</section>
+
+
+
+<!-- STATUS BAR (Appears only after scrolling) -->
+<section class="bg-blue-600 text-white flex justify-around py-4">
+    <div class="text-center">
+        <h3 class="text-2xl font-bold">0+</h3>
+        <p class="text-sm">Tech Stacks</p>
+    </div>
+
+    <div class="text-center">
+        <h3 class="text-2xl font-bold">0+</h3>
+        <p class="text-sm">Topics</p>
+    </div>
+
+    <div class="text-center">
+        <h3 class="text-2xl font-bold">100%</h3>
+        <p class="text-sm">Self-paced</p>
+    </div>
+</section>
+
+
+<!-- FEATURES GRID -->
+<section class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto mt-12 px-4 pb-24">
+
+    <div class="bg-white p-6 rounded-xl border-2 border-gray-300 shadow-md hover:shadow-lg transition text-center">
+        <div class="text-blue-600 text-4xl mb-2">📘</div>
+        <h3 class="text-lg font-semibold">Community Driven</h3>
+        <p class="text-gray-600 text-sm mt-2">
+            Learners drive the platform with their shared insights and topics.
+        </p>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl border-2 border-gray-300 shadow-md hover:shadow-lg transition text-center">
+        <div class="text-blue-600 text-4xl mb-2">🧭</div>
+        <h3 class="text-lg font-semibold">Structured Topics</h3>
+        <p class="text-gray-600 text-sm mt-2">
+            Follow well-organized study topics for each tech stack.
+        </p>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl border-2 border-gray-300 shadow-md hover:shadow-lg transition text-center">
+        <div class="text-blue-600 text-4xl mb-2">💻</div>
+        <h3 class="text-lg font-semibold">Multiple Stacks</h3>
+        <p class="text-gray-600 text-sm mt-2">
+            MERN, Flutter, Django, DevOps, and more.
+        </p>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl border-2 border-gray-300 shadow-md hover:shadow-lg transition text-center">
+        <div class="text-blue-600 text-4xl mb-2">⏱️</div>
+        <h3 class="text-lg font-semibold">Self-paced Learning</h3>
+        <p class="text-gray-600 text-sm mt-2">
+            Learn at your own speed, anytime.
+        </p>
+    </div>
+
+</section>
+
+    <!-- Responsive Footer -->
+    <footer class="text-center text-gray-600 py-6">
+        © 2025 BNext Dev. All rights reserved.
+    </footer>
+    <!-- Tiny vanilla JS – no animation on hamburger -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close when clicking overlay or any link
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu || e.target.tagName === 'A') {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+
+</html>
