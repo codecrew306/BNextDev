@@ -1,0 +1,28 @@
+{
+  "name": "bnextdev",
+  "version": "1.0.0",
+  "description": "Rules to follow when working with this repository.\r 1. Always work by forking the repository\r 2. Always create a new branch when working\r 3. The commit message should be descriptive about the changes you made in the code, like, \"Create form for login\", \"Implement logic for user authentication\", etc. And don't write the commit like \"Made changes in the code\", \"Created some files\", etc.\r 4. Always push the code to the development branch, not the main branch.\r 5. Always inform the owner about the changes you made.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brito-Reji/BNextDev.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Brito-Reji/BNextDev/issues"
+  },
+  "homepage": "https://github.com/Brito-Reji/BNextDev#readme",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "ejs": "^3.1.10",
+    "express": "^5.2.1",
+    "firebase-admin": "^13.6.0"
+  }
+}
