@@ -2,13 +2,13 @@
   "name": "bnextdev",
   "version": "1.0.0",
   "description": "Rules to follow when working with this repository.\r 1. Always work by forking the repository\r 2. Always create a new branch when working\r 3. The commit message should be descriptive about the changes you made in the code, like, \"Create form for login\", \"Implement logic for user authentication\", etc. And don't write the commit like \"Made changes in the code\", \"Created some files\", etc.\r 4. Always push the code to the development branch, not the main branch.\r 5. Always inform the owner about the changes you made.",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "node src/server.js",
-    "dev": "nodemon src/server.js","dev:css": "npx @tailwindcss/cli -i ./src/public/css/input.css -o ./src/public/css/output.css --watch",
-  "build:css": "npx @tailwindcss/cli -i ./src/public/css/input.css -o ./src/public/css/output.css --minify"
-
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "dev:css": "npx @tailwindcss/cli -i ./src/public/css/input.css -o ./src/public/css/output.css --watch",
+    "build:css": "npx @tailwindcss/cli -i ./src/public/css/input.css -o ./src/public/css/output.css --minify"
   },
   "repository": {
     "type": "git",
