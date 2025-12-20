@@ -8,7 +8,10 @@
     "start": "node server.js",
     "dev": "nodemon server.js",
     "dev:css": "npx @tailwindcss/cli -i ./src/public/css/input.css -o ./src/public/css/output.css --watch",
-    "build:css": "npx @tailwindcss/cli -i ./src/public/css/input.css -o ./src/public/css/output.css --minify"
+    "build:css": "npx @tailwindcss/cli -i ./src/public/css/input.css -o ./src/public/css/output.css --minify",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "format:src": "prettier --write \"src/**/*.{js,json,css,html,ejs}\""
   },
   "repository": {
     "type": "git",
@@ -28,7 +31,13 @@
     "express-async-handler": "^1.2.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.2",
     "@tailwindcss/cli": "^4.1.18",
+    "ejs-lint": "^2.0.1",
+    "eslint": "^9.39.2",
+    "eslint-plugin-import": "^2.32.0",
+    "globals": "^16.5.0",
+    "prettier": "^3.7.4",
     "tailwindcss": "^4.1.18"
   }
 }
