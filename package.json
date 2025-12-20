@@ -11,7 +11,9 @@
     "build:css": "npx @tailwindcss/cli -i ./src/public/css/input.css -o ./src/public/css/output.css --minify",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "format:src": "prettier --write \"src/**/*.{js,json,css,html,ejs}\""
+    "format:src": "prettier --write \"src/**/*.{js,json,css,html,ejs}\"",
+    "lint": "eslint .",
+  "lint:fix": "eslint . --fix"
   },
   "repository": {
     "type": "git",
